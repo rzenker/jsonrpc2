@@ -94,7 +94,8 @@ class JsonRpcException(Exception):
         return json.dumps(self.as_dict())
 
 class JsonRpcBase(object):
-    def __init__(self, methods=None):
+    def __init__(self, methods=None, exception_cb=None):
+        self.exception_cb = exception_cb
         if methods is not None:
             self.methods = methods
         else:
@@ -153,6 +154,8 @@ class JsonRpcBase(object):
         except JsonRpcException, e:
             raise e
         except Exception, e:
+            if self.exception_cb:
+                self.exception_cb(e)
             raise JsonRpcException(data.get('id'), INTERNAL_ERROR, data=str(e))
 
     def _call(self, data, extra_vars):
