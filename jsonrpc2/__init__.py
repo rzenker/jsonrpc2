@@ -189,8 +189,8 @@ class JsonRpcBase(object):
 
 
 class JsonRpc(JsonRpcBase):
-    def __init__(self, methods=None):
-        super(JsonRpc, self).__init__(methods)
+    def __init__(self, methods=None, **kwargs):
+        super(JsonRpc, self).__init__(methods, **kwargs)
 
     def add_module(self, mod):
         name = mod.__name__
