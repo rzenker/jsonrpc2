@@ -1,0 +1,3 @@
+recursive-include jsonrpc2/paste/templates/paster_jsonrpc2_template *.py *_tmpl *.cfg *.js
+include rpc_example.txt
+include ChangeLog

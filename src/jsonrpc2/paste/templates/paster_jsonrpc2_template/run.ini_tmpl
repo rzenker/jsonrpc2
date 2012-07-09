@@ -1,0 +1,18 @@
+[app:rpc]
+use = egg:jsonrpc2#main
+modules =
+    {{package}}.sample
+
+[app:static]
+use = egg:Paste#static
+document_root = %(here)s/static
+
+[composite:main]
+use = egg:Paste#urlmap
+/rpc = rpc
+/ = static
+
+[server:main]
+use = egg:Paste#http
+port = 8080
+

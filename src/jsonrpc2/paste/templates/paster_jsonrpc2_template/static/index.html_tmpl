@@ -1,0 +1,37 @@
+<html>
+  <head>
+     <script src="json2.js"></script>
+     <script>
+<!--
+function greeting(name, callback) {
+    var params = {
+        "jsonrpc":"2.0", 
+        "method":"{{package}}.sample.greeting", 
+        "params":[name], 
+        "id":"greeting"};
+    callrpc(params, callback);
+}
+
+function callrpc(params, callback) {
+    var req = new XMLHttpRequest();
+    req.open('POST', '/rpc', true);
+    req.setRequestHeader('Content-type', 'application/json');
+
+    req.onreadystatechange = function() {
+        if (req.readyState == 4 && req.status == 200) {
+            var res = JSON.parse(req.responseText);
+            callback(res.result);
+        }
+    };
+    req.send(JSON.stringify(params));
+}
+// -->
+     </script>
+  </head>
+  <body>
+    <label for="greeting-name">Name:</label>
+    <input type="text" id="greeting-name" />
+    <button onclick="greeting(document.getElementById('greeting-name').value, function(result){alert(result.message);})">Greeting</button>
+  </body>
+</html>
+

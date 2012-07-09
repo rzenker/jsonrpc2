@@ -1,0 +1,39 @@
+ChangeLog
+===================================================
+
+0.3
+-----------------------------------------------
+
+- fix bugs
+- Paste Scripte templates
+- runjsonrpc2 command
+
+0.3.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- fix bugs (content-type with charset)
+
+0.3.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- enable to pass the extra vars to procedures
+
+0.2
+-----------------------------------------------
+
+- remove dependency to WebOb
+- split procedure call class from web application class
+
+0.2.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- lazy loading from method name.
+
+0.2.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- add dict interface.
+
+0.2.3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- fix: read body with CONTENT_LENGTH.
